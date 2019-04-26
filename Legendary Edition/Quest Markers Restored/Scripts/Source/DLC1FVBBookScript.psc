@@ -8,7 +8,7 @@ Event OnContainerChanged(ObjectReference akNewContainer, ObjectReference akOldCo
 	If akNewContainer == Game.GetPlayer()
 		pDLC1FVBGotABook.Mod(1.0)
 		pDLC1VQFVBooks.ModObjectiveGlobal(1.0, pDLC1FVBBooksDiscovered, 8, 4.0)
-		If !pDLC1VQFVBooks.GetStageDone(20)
+		If pDLC1FVBBooksDiscovered.GetValue() >= 4.0
 			pDLC1VQFVBooks.SetStage(20)
 		EndIf
 	EndIf
